@@ -1,0 +1,19 @@
+export const setAuth = ({ accessToken, user }) => {
+  localStorage.setItem('token', accessToken);
+  localStorage.setItem('user', JSON.stringify(user));
+};
+
+export const getUser = () => {
+  if (typeof window === 'undefined') return null;
+  const user = localStorage.getItem('user');
+  return user ? JSON.parse(user) : null;
+};
+
+export const getToken = () => {
+  if (typeof window === 'undefined') return null;
+  return localStorage.getItem('token');
+};
+
+export const logout = () => {
+  localStorage.clear();
+};
