@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     './node_modules/flowbite-react/**/*.js',
     './node_modules/rizzui/dist/*.{js,ts,jsx,tsx}', // ⚠️ Required this line to compile RizzUI style.

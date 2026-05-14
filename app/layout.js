@@ -1,31 +1,19 @@
 'use client';
 
 import './globals.css';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import React from 'react';
-// import Footer from "@/components/partials/Footer";
 import Header from '@/components/partials/Header';
 import { Lato } from 'next/font/google';
 import Script from 'next/script';
 import Footer from '@/components/partials/Footer';
 import { Toaster } from 'react-hot-toast';
 
-//fonts
-const lato = Lato({
-  subsets: ['latin'],
-  weight: ['300', '400', '700'], // choose the weights you need
-  style: ['normal', 'italic'], // optional
-  variable: '--font-lato', // optional for CSS variable usage
-  display: 'swap', // improves font loading
-});
-
 export default function RootLayout({ children }) {
   const [isOpen, setIsOpen] = React.useState(true);
 
   return (
     <>
-      <html lang="en" className={`${lato.className} font-sans z-10`}>
+      <html lang="en" className={`font-sans z-10`}>
         <body className="tracking-wider">
           <main>
             <Header />
